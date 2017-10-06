@@ -1,0 +1,17 @@
+
+# standard make variables
+
+LIB = /usr/local/lib/libNAME.a
+CFLAGS = -O4 -I/usr/local/include
+VPATH = ../include:/usr/local/lib
+
+# library components
+
+$(LIB):	$(LIB)(FILE1.o)	\
+	$(LIB)(FILE2.o)	
+
+# component dependencies
+
+$(LIB)(FILE1.o):		
+$(LIB)(FILE2.o):		/usr/local/include/libsize_types.h
+
